@@ -1,0 +1,93 @@
+@import url(./variable.css);
+
+/**-----------------Init-------------------- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/**-----------------FONT-------------------- */
+.H1 {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2.5rem; /* 142.857% */
+}
+.H2 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2rem; /* 133.333% */
+}
+.H3 {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.75rem; /* 140% */
+}
+.Bl {
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 1.625rem;
+}
+.Bm {
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem; /* 150% */
+}
+.Bs {
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.375rem;
+}
+.Bxs {
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1.25rem; /* 166.67% */
+}
+.Bold {
+  font-weight: 900;
+}
+.Medium {
+  font-weight: 500;
+}
+.Regular {
+  font-weight: 400;
+}
+.Grey {
+  color: var(--grey);
+}
+
+/**-----------------Special------------------ */
+/* .📦 {
+  width: var(--component-width);
+  padding: 0rem 1rem;
+  display: flex;
+  margin: auto;
+} */
