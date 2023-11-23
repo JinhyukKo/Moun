@@ -114,7 +114,7 @@ export default function Header({ isOpened, setOpened }) {
     }
   }, [isMobile]);
   return (
-    <header className="fixed top-0 w-screen h-[4.5rem] bg-black2 text-white z-10">
+    <header className="fixed top-0 px-3 w-screen h-[4.5rem] bg-black2 text-white z-10">
       {isOpened ? (
         <div className="absolute top-[20rem] w-screen h-screen bg-black2 opacity-50"></div>
       ) : (
