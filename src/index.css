@@ -3,7 +3,7 @@
 @tailwind utilities;
 :root {
   --component-width: min(1400px, 100%);
-  --album-width: clamp(9.5rem, 100%, 15rem);
+  --album-width: min(calc(9.5rem + 10vw), 17.5rem);
   --album-height: clamp(9.5rem, 100%, 15rem);
 }
 
