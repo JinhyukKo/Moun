@@ -17,18 +17,20 @@ export default function Login() {
     },
   ];
   return (
-    <div className="📦 flex">
-      <section className="w-1/2 hidden lg:block mt-40">
+    <div className="📦 flex flex-col-reverse lg:flex-row">
+      <section className="w-full lg:w-1/2 lg:block mt-8 my-40 lg:mt-40">
         <div className="flex flex-col items-center">
-          <h1 className="H2 w-80 mb-10">
+          <h1 className="H2 w-80 mb-10 hidden lg:block">
             Get To Know Each Other Through Songs
           </h1>
+          {/* //* login */}
           {loginList.map((element) => {
             return (
               <Link
-                className="my-1 flex justify-center text-center font-medium text-base w-[25rem] h-12 rounded-lg border border-gray leading-[3rem] hover:shadow-md hover:border-black2"
+                className="my-1 flex justify-center text-center font-medium text-base w-[min(25rem,85%)] h-12 rounded-lg border border-gray leading-[3rem] hover:shadow-md hover:border-black2"
                 to={element.url}
               >
+                {/*//* logo */}
                 <img
                   className="px-2 object-none"
                   alt="logo"
@@ -47,7 +49,11 @@ export default function Login() {
           </p>
         </div>
       </section>
-      <img className="w-1/2" src={LoginImg} alt="" />
+      <img
+        className="lg:w-1/2 h-[calc(16rem+10vw)] lg:h-auto w-screen object-cover"
+        src={LoginImg}
+        alt=""
+      />
     </div>
   );
 }

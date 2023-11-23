@@ -15,7 +15,7 @@ li {
   width: fit-content;
 }
 .📦 {
-  @apply px-4 flex m-auto w-[var(--component-width)];
+  @apply flex m-auto w-[var(--component-width)];
 }
 header .active {
   @apply text-magenta;
