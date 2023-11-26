@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dac9c47d.css",
+    "main.js": "/static/js/main.ccb588e8.js",
+    "static/media/loginpage.png": "/static/media/loginpage.ca5e28e4539d12b89829.png",
+    "static/media/favicon.svg": "/static/media/favicon.7e6155bf26087763d7d7fb33e015977d.svg",
+    "static/media/banner1.jpg": "/static/media/banner1.9dc7227450616165d737.jpg",
+    "static/media/rectangle-55.jpg": "/static/media/rectangle-55.0b654c8d3ecae5a66765.jpg",
+    "static/media/rectangle-56.jpg": "/static/media/rectangle-56.d97cbda28594f6e55f21.jpg",
+    "static/media/rectangle-54.jpg": "/static/media/rectangle-54.05f2959fc7515e826fbe.jpg",
+    "static/media/rectangle-53.jpg": "/static/media/rectangle-53.cdbe21dddf3be5edc723.jpg",
+    "static/media/userProfile.png": "/static/media/userProfile.96de4084177121349cf2.png",
+    "index.html": "/index.html",
+    "static/media/naver-logo.svg": "/static/media/naver-logo.12316512ab91b1ff979b168bc7baaa4f.svg",
+    "main.dac9c47d.css.map": "/static/css/main.dac9c47d.css.map",
+    "main.ccb588e8.js.map": "/static/js/main.ccb588e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dac9c47d.css",
+    "static/js/main.ccb588e8.js"
+  ]
+}

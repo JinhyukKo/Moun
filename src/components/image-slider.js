@@ -1,8 +1,11 @@
-import { useState, useEffect, useRef } from "react";
-
+import { useState, useEffect, useRef, useContext } from "react";
+import { isMobileContext } from "../contexts/ismobile";
 export default function ImageSlider({ slides }) {
-  const [current, setCurrent] = useState(0);
-  const slidesRef = useRef(slides);
+  //* ------------ variables ------------//
+  const [current, setCurrent] = useState(0); //current slide index
+  const slidesRef = useRef(slides); //slides
+  const { isMobile } = useContext(isMobileContext);
+  //* ------------ useEffect ------------//
   const prevSlider = () => {
     setCurrent((prevState) => (prevState === 0 ? 0 : prevState - 1));
   };
@@ -11,6 +14,19 @@ export default function ImageSlider({ slides }) {
       prevState === slides.length - 1 ? slides.length - 1 : prevState + 1
     );
   };
+  const prevButton = {
+    id: "⬅️",
+    d: "M15 19l-7-7 7-7",
+    span: "Previous",
+    click: prevSlider,
+  };
+  const nextButton = {
+    id: "➡️",
+    d: "M9 5l7 7-7 7",
+    span: "Next",
+    click: nextSlider,
+  };
+  const button = [prevButton, nextButton];
 
   useEffect(() => {
     const interval = setTimeout(() => {
@@ -21,19 +37,12 @@ export default function ImageSlider({ slides }) {
       console.log("ccurent" + current);
     }, 6000);
 
-    // const setCurrentPromise = new Promise((resolve, reject) => {
-    //   setCurrent(1);
-    //   resolve(current);
-    // });
-    // setCurrentPromise.then((current) => {
-    //   console.log("current" + current);
-    // });
-
     return () => {
       clearInterval(interval);
     };
   }, [current]);
 
+  //* ------------ return ------------//
   return (
     <div
       id="default-carousel"
@@ -77,8 +86,35 @@ export default function ImageSlider({ slides }) {
           );
         })}
       </div>
-
-      <button
+      {button.map((element, idx) => (
+        <button
+          type="button"
+          id={element.id}
+          style={idx === 0 ? { left: "0" } : { right: "0" }}
+          className="flex absolute top-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+          data-carousel-next
+          onClick={element.click}
+        >
+          <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10  dark:bg-gray-800/40 group-hover:bg-white/30 dark:group-hover:bg-gray-800/60 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="square"
+                stroke-linejoin="square"
+                stroke-width={isMobile ? "5" : "3.5"}
+                d={element.d}
+              ></path>
+            </svg>
+            <span className="hidden">{element.span}</span>
+          </span>
+        </button>
+      ))}
+      {/* <button
         type="button"
         id="⬅️"
         className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
@@ -102,9 +138,10 @@ export default function ImageSlider({ slides }) {
           </svg>
           <span className="hidden">Previous</span>
         </span>
-      </button>
-      <button
+      </button> */}
+      {/* <button
         type="button"
+        id="➡️"
         className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
         data-carousel-next
         onClick={nextSlider}
@@ -126,7 +163,7 @@ export default function ImageSlider({ slides }) {
           </svg>
           <span className="hidden">Next</span>
         </span>
-      </button>
+      </button> */}
     </div>
   );
 }
