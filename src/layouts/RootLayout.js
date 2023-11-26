@@ -4,7 +4,6 @@ import Footer from "./Footer/footer";
 
 import { useRef, useEffect, useState, useMemo } from "react";
 import { isMobileContext } from "../contexts/ismobile";
-import { StepTitle } from "@chakra-ui/react";
 
 export default function RootLayout() {
   //* RootLayout
