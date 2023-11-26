@@ -106,7 +106,7 @@ export default function ImageSlider({ slides }) {
               <path
                 stroke-linecap="square"
                 stroke-linejoin="square"
-                stroke-width={isMobile ? "5" : "3.5"}
+                stroke-width={isMobile ? "6" : "4"}
                 d={element.d}
               ></path>
             </svg>
